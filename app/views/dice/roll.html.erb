@@ -1,3 +1,6 @@
 <!-- app/views/dice/roll.html.erb -->
 <h1>サイコロを振る</h1>
 <p>出た目: <%= @result %></p>
+<%= form_tag({ action: "roll" }, method: :get) do %>
+  <%= submit_tag "サイコロを振る" %>
+<% end %>
